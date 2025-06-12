@@ -16,7 +16,7 @@ export const QuestionsAndAnswers = ({data}) => {
                             alt="Chevron down icon"/>
                         <Image 
                             className="ml-2 block dark:hidden"
-                            src="/icons/chevron_down.svg.svg"
+                            src="/icons/chevron_down.svg"
                             width={16}
                             height={16}
                             alt="Chevron down icon"/>
