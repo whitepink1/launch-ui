@@ -1,26 +1,537 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-black: rgb(9,9,11);
+  --color-white: rgb(250,250,250);
+  --color-grey: rgb(161,161,170);
+  --color-grey-button: rgb(233,228,222);
+  --color-orange: rgb(253,186,116);
+
+  --color-flashlight-fire: rgb(239,68,68);
+  --color-flashlight-ultraviolet: rgb(167,139,250);
+  --color-flashlight-titanium: rgb(212,212,216);
+  --color-flashlight-emerald: rgb(110,231,183);
+  --color-flashlight-orange: rgb(251,146,60);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@utility bg-main {
+  @apply bg-white dark:bg-black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility container-center {
+  @apply w-[95vw] lg:w-[90vw] mx-auto
+}
+
+@utility font-h1 {
+  @apply font-semibold text-4xl lg:text-7xl xl:text-8xl
+}
+@utility font-h2 {
+  @apply font-semibold text-3xl lg:text-7xl
+}
+@utility font-h3 {
+  @apply font-semibold text-3xl lg:text-5xl
+}
+@utility font-h4 {
+  @apply font-semibold text-xl lg:text-2xl
+}
+@utility font-logo {
+  @apply font-bold text-lg
+}
+@utility font-paragraph-md-bold {
+  @apply font-semibold text-base lg:text-lg
+}
+@utility font-paragraph-md {
+  @apply font-normal text-base
+}
+@utility font-paragraph {
+  @apply font-medium text-base lg:text-xl
+}
+@utility font-paragraph-xs {
+  @apply font-medium text-xs
+}
+@utility font-paragraph-sm {
+  @apply font-medium text-sm lg:text-base
+}
+@utility font-paragraph-lg {
+  @apply font-semibold text-lg
+}
+@utility font-paragraph-sm-semi {
+  @apply font-semibold text-sm
+}
+@utility font-price {
+  @apply font-semibold text-6xl
+}
+
+@utility header-size {
+  @apply lg:w-[65%] 2xl:w-[45%] mx-auto
+}
+@utility paragraph-size {
+  @apply lg:w-[45%] mx-auto text-center mt-3 mb-10 lg:mt-8 
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center
+}
+@utility flex-center-start {
+  @apply flex justify-center items-start
+}
+@utility flex-between {
+  @apply flex justify-between items-center
+}
+@utility flex-start {
+  @apply flex justify-start items-center
+}
+@utility flex-col-center {
+  @apply flex flex-col justify-center items-center
+}
+@utility flex-col-start {
+  @apply flex flex-col justify-center items-start
+}
+@utility flex-col-start-start {
+  @apply flex flex-col justify-start items-start
+}
+@utility flex-col-between {
+  @apply flex flex-col justify-between items-start
+}
+
+@utility button-white {
+  @apply bg-gradient-to-b dark:from-white dark:to-white/80 dark:text-black
+  from-black to-black/80 text-white
+}
+
+@utility button-dark {
+  @apply bg-gradient-to-b from-white to-white/80 text-black
+  dark:from-black dark:to-black/80 dark:text-white
+}
+
+@utility button-grey {
+  @apply dark:bg-gradient-to-b bg-white/65 text-black
+   inset-shadow-sm
+  dark:from-black/90 dark:to-black/70 dark:text-white
+}
+
+@utility hero-wide-border {
+  @apply border-5 border-grey/20 dark:border-grey/35
+}
+
+.gradient-gray-border {
+  background: linear-gradient(
+    to bottom,
+    rgba(9,9,11, 0.2) 0%,
+    rgba(9,9,11, 0.05) 16%,
+    rgba(9,9,11, 0.05) 88%,
+    rgba(9,9,11, 0) 100%
+  );
+}
+
+.dark .gradient-white-border {
+  background: linear-gradient(
+    to bottom,
+    rgba(250,250,250, 0.2) 0%,
+    rgba(250,250,250, 0.05) 16%,
+    rgba(250,250,250, 0.05) 88%,
+    rgba(250,250,250, 0) 100%
+  );
+}
+
+@utility gradient-color {
+  @apply bg-gradient-to-r dark:from-white
+   dark:to-grey bg-clip-text text-transparent
+    from-black to-black/80
+}
+
+@utility gradient-border {
+  @apply border-2 border-transparent
+    bg-gradient-to-b from-[rgba(9,9,11,0.2)] to-[rgba(9,9,11,0.05)]
+    dark:from-[rgba(250,250,250,0.2)] dark:to-[rgba(250,250,250,0.05)]
+    bg-origin-border rounded-2xl
+}
+
+.gradient-wide-board {
+  background: linear-gradient(
+    to bottom,
+    rgba(9,9,11, 0) 0%, 
+    rgba(9,9,11, 0.9) 86%
+  );
+}
+
+@utility gradient-wide-board {
+  @apply w-full h-full z-15
+  bg-[linear-gradient(to_top,_rgba(9,9,11,1)_0%,_rgba(9,9,11,0.6)_66%)] 
+  
+}
+
+@utility gradient-wide-board-light {
+  @apply w-full h-full z-15
+  bg-[linear-gradient(to_top,_rgba(250,250,250,1)_0%,_rgba(250,250,250,0.6)_66%)]
+}
+@utility theme-button {
+  @apply relative
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:bottom-0
+    before:left-1/2
+    before:translate-x-[-50%]
+    before:w-full
+    before:h-[35px]
+    before:rounded-[50%]
+    before:filter
+    before:blur-[18px]
+    before:-z-10
+}
+.layer-blur-secondary::before {
+  background-color: var(--flashlight-color);
+  opacity: 0.8;
+}
+@utility layer-blur-secondary {
+  @apply relative
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:top-5
+    lg:before:top-10
+    2xl:before:top-10
+    before:left-1/2
+    before:translate-x-[-50%]
+    before:w-[200px]
+    before:h-[160px]
+    lg:before:w-[250px]
+    lg:before:h-[200px]
+    2xl:before:w-[450px]
+    2xl:before:h-[400px]
+    before:rounded-[50%]
+    before:filter
+    before:blur-[60px]
+    lg:before:blur-[130px]
+    2xl:before:blur-[130px]
+    before:-z-10
+}
+.layer-blur-main::before,
+.layer-blur-main-second::after {
+  background-color: var(--flashlight-color);
+  opacity: 0.8;
+}
+@utility layer-blur-main {
+  @apply relative
+    bg-white dark:bg-black
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:top-0
+    md:before:top-15
+    xl:before:-top-5
+    before:left-1/2
+    before:translate-x-[-50%]
+    before:w-[85px]
+    before:h-[160px]
+    md:before:w-[675px]
+    md:before:h-[148px]
+    xl:before:w-[950px]
+    xl:before:h-[148px]
+    before:rounded-[50%]
+    before:filter
+    before:blur-[60px]
+    md:before:blur-[100px]
+    before:-z-10
+}
+@utility layer-blur-main-second {
+  @apply relative
+    bg-white dark:bg-black
+    rounded-2xl
+    p-6
+    z-0
+    after:content-['']
+    after:absolute
+    after:top-0
+    md:after:top-20
+    xl:after:top-40
+    after:left-1/2
+    after:translate-x-[-50%]
+    after:w-[75px]
+    after:h-[148px]
+    md:after:w-[675px]
+    md:after:h-[300px]
+    xl:after:w-[950px]
+    xl:after:h-[290px]
+    after:rounded-[50%]
+    after:filter
+    after:blur-[50px]
+    md:after:blur-[90px]
+    xl:after:blur-[140px]
+    after:-z-10
+}
+.middle-light::before {
+  background-color: var(--flashlight-color);
+  opacity: 0.8;
+}
+@media (min-width: 1536px) {
+  .middle-light::before {
+    opacity: 0.5;
   }
 }
+@utility middle-light {
+  @apply 
+    bg-white dark:bg-black
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:bottom-1/3
+    before:left-1/2
+    before:translate-y-[50%]
+    before:translate-x-[-50%]
+    before:w-[100px]
+    before:h-[80px]
+    md:before:w-[200px]
+    md:before:h-[160px]
+    2xl:before:w-[400px]
+    2xl:before:h-[320px]
+    before:rounded-[50%]
+    before:filter
+    before:blur-[90px]
+    md:before:blur-[120px]
+    2xl:before:blur-[180px]
+    before:-z-10
+}
+.layer-down-blur::before {
+  background-color: var(--flashlight-color);
+  opacity: 0.6;
+}
+@utility layer-down-blur {
+  @apply relative
+    bg-white dark:bg-black
+    z-1
+    before:content-['']
+    before:absolute
+    before:-bottom-10
+    before:left-1/2
+    before:translate-x-[-50%]
+    before:w-full
+    lg:before:w-[80%]
+    before:h-[120px]
+    lg:before:h-[100px]
+    before:rounded-[40%]
+    before:filter
+    before:blur-[100px]
+    lg:before:blur-[120px]
+    before:-z-10
+}
+.layer-blur-card::before {
+  background-color: var(--flashlight-color);
+  opacity: 0.7;
+}
+@utility layer-blur-card {
+  @apply relative
+    bg-white dark:bg-black
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:top-0
+    before:left-1/2
+    before:translate-y-[-50%]
+    before:translate-x-[-50%]
+    before:w-[300px]
+    before:h-[145px]
+    before:rounded-[50%]
+    before:filter
+    before:blur-[80px]
+    before:-z-10
+}
+@utility layer-blur-card-silver {
+  @apply relative
+    bg-white dark:bg-black
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:top-0
+    before:left-1/2
+    before:translate-y-[-50%]
+    before:translate-x-[-50%]
+    before:w-[300px]
+    before:h-[145px]
+    before:rounded-[50%]
+    before:bg-grey/70
+    before:filter
+    before:blur-[80px]
+    before:-z-10
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility layer-blur-card-empty {
+  @apply relative
+    bg-white dark:bg-black
+    rounded-2xl
+    p-6
+    z-0
+    before:content-['']
+    before:absolute
+    before:top-1/2
+    before:left-0
+    before:translate-y-[-50%]
+    before:w-full
+    before:h-full
+    dark:before:bg-white/2
+    before:-z-10
+}
+.stroke-blur-card::after {
+  background-image: linear-gradient(to right,  rgba(255,255,255,0) 0%, var(--flashlight-color) 50%, rgba(255,255,255,0) 100%);
+}
+@utility stroke-blur-card {
+  @apply relative
+    w-full
+    rounded-2xl
+    after:content-['']
+    after:absolute
+    after:-top-0.5
+    dark:after:left-0
+    after:left-1/2
+    dark:after:w-full
+    dark:after:translate-x-0
+    after:-translate-x-1/2
+    after:w-[60%]
+    after:h-[2px]
+    after:pointer-events-none
+}
+@utility stroke-blur-card-silver {
+  @apply relative
+    w-full
+    rounded-2xl
+    after:content-['']
+    after:absolute
+    after:-top-0.5
+    dark:after:left-0
+    after:left-1/2
+    dark:after:w-full
+    after:w-[60%]
+    after:h-[2px]
+    dark:after:translate-x-0
+    after:-translate-x-1/2
+    after:bg-gradient-to-r
+    dark:after:from-white/0
+    dark:after:via-white
+    dark:after:to-white/0
+    after:from-black/0
+    after:via-black/55
+    after:to-black/0
+    after:pointer-events-none
+}
+.stroke-circle-lightning::before{
+  border-color: var(--flashlight-color);
+  opacity: 0.9;
+}
+@utility stroke-circle-lightning {
+  @apply relative
+    rounded-full
+    z-0
+    before:content-['']
+    before:absolute
+    before:-top-[3px]
+    before:left-1/2
+    before:translate-x-[-50%]
+    before:w-[1060px]
+    before:h-[1000px]
+    before:rounded-[50%]
+    before:border-[15px]
+    before:filter
+    before:blur-[25px]
+    before:-z-10
+}
+@utility stroke-circle {
+  @apply relative
+    rounded-full
+    z-0
+    after:content-['']
+    after:absolute
+    after:-top-[3px]
+    after:left-1/2
+    after:translate-x-[-50%]
+    after:w-[1060px]
+    after:h-[1000px]
+    after:rounded-[50%]
+    after:border-[5px]
+    after:filter
+    after:blur-[1px]
+    after:-z-15
+}
+.stroke-circle::after{
+  border-color: var(--flashlight-color);
+}
+
+@utility left-light {
+  @apply relative
+    after:content-['']
+    after:absolute
+    after:-top-[4px]
+    after:-left-10
+    after:w-[25%]
+    after:h-full
+    after:bg-gradient-to-r
+    after:from-white
+    after:via-white/85
+    after:to-white/15
+    after:filter
+    after:blur-[10px]
+    after:z-15
+}
+
+@utility right-light {
+  @apply relative
+    before:content-['']
+    before:absolute
+    before:-top-[4px]
+    before:-right-10
+    before:w-[25%]
+    before:h-full
+    before:bg-gradient-to-l
+    before:from-white
+    before:via-white/85
+    before:to-white/15
+    before:filter
+    before:blur-[10px]
+    before:z-15
+}
+
+@utility left-dark {
+  @apply relative
+    after:content-['']
+    after:absolute
+    after:-top-[4px]
+    after:-left-10
+    after:w-[25%]
+    after:h-full
+    after:bg-gradient-to-r
+    after:from-black
+    after:via-black/85
+    after:to-black/15
+    after:filter
+    after:blur-[10px]
+    after:z-15
+}
+@utility right-dark {
+  @apply relative
+    before:content-['']
+    before:absolute
+    before:-top-[4px]
+    before:-right-10
+    before:w-[25%]
+    before:h-full
+    before:bg-gradient-to-l
+    before:from-black
+    before:via-black/85
+    before:to-black/15
+    before:filter
+    before:blur-[10px]
+    before:z-15
 }

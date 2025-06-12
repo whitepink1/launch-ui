@@ -1,0 +1,132 @@
+{   
+    "buttons": {
+        "getStarted": "Get started",
+        "gitHub": "Github",
+        "readMore": "Read more"
+    },
+    "navigation": [
+        {"text": "Getting started", "href": "/"},
+        {"text": "Components", "href": "/"},
+        {"text": "Documentation", "href": "/"}
+    ],
+    "herosection": {
+        "newVersion": "New version of Launch UI is out!",
+        "heroHead": "Give your big idea the website it deserves",
+        "heroText": "Landing page kit template with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
+        "tools": "Built with the best tools"
+    },    
+    "features": {
+        "header": "Build a better website, faster.",
+        "cards": [
+            {"name": "100+ sections and components", "area": "a", "text": "All the elements you need to build a modern, responsive, and accessible landing page.", "url": "illustration_1.svg", "urlDark": "dark_illustration_1.svg"},
+            {"name": "You’re in control", "area": "b", "text": "This is not a component library. It's a collection of re-usable components that you can copy and paste into your apps.", "url": "illustration_2.svg", "urlDark": "dark_illustration_2.svg"},
+            {"name": "Fits right into your stack", "area": "c", "text": "Built with modern web technologies and tools that fit right into any React project. No bloat, no extra dependencies, no risk of conflicts.", "url": "illustration_3.svg", "urlDark": "dark_illustration_3.svg"},
+            {"name": "Data-agnostic", "area": "d", "text": "All the data is separate from components so you can edit it in seconds or make it dynamic. Easily connect to a CMS of your choice.", "url": "illustration_4.svg", "urlDark": "dark_illustration_4.svg", "messages": ["We need to update this heading before launch","Sofia G.", "Let me quickly jump into Sanity and fix it", "Done!", "Erik D."]}
+        ]
+    },
+    "featuresText": {
+        "header": "Everything you need. Nothing you don’t.",
+        "data": [
+            {"label": "Accessibility first", "text": "Fully WCAG 2.0 compliment, made with best a11y practices", "img": "/icons/scan-face.svg", "imgDark": "/icons/dark-scan-face.svg"},
+            {"label": "Responsive design", "text": "Looks and works great on any device and screen size", "img": "/icons/monitor-smartphone.svg", "imgDark": "/icons/dark-monitor-smartphone.svg"},
+            {"label": "Light and dark mode", "text": "Seamless switching between color schemes, 6 themes included", "img": "/icons/eclipse.svg", "imgDark": "/icons/dark-eclipse.svg"},
+            {"label": "Easy to customize", "text": "Flexible options to match your  product or brand", "img": "/icons/blocks.svg", "imgDark": "/icons/dark-blocks.svg"},
+            {"label": "Top-level performance ", "text": "Made for lightning-fast load times and smooth interactions", "img": "/icons/fast-forward.svg", "imgDark": "/icons/dark-fast-forward.svg"},
+            {"label": "Production ready", "text": "Thoroughly tested and launch-prepared", "img": "/icons/rocket.svg", "imgDark": "/icons/dark-rocket.svg"},
+            {"label": "Made for localisation", "text": "Easy to implement support for multiple languages and regions", "img": "/icons/languages.svg", "imgDark": "/icons/dark-languages.svg"},
+            {"label": "CMS friendly", "text": "Built to work with your any headless content management system", "img": "/icons/square-pen.svg", "imgDark": "/icons/dark-square-pen.svg"}
+    ]},
+    "qualityTrust": {
+        "header": "Quality you can trust. And build on.",
+        "text": "You can trust that all of the designs are taking the full advantage of newest Figma’s features and that code is written following best practices out there."
+    },
+    "testimonials": {
+        "header": "Loved by designers and developers across the planet",
+        "text": "Here’s what people are saying about Launch UI",
+        "users": [
+            {"name": "Fabrizio Fernandez", "username": "@fab3304", "text": "Testing out @launchui's responsive design. That’s the template we’ve all been waiting for. My mobile-first heart is doing a happy dance.", "img": "/images/users/1.jpg", "imgBlur": "/images/users/blur_1.jpg"},
+            {"name": "Felix Beaumont ", "username": "@felixbs", "text": "Digging into @launchui. Those shadows are giving me serious design envy.", "img": "/images/users/2.jpg", "imgBlur": "/images/users/blur_2.jpg"},
+            {"name": "Esme Rothschild", "username": "@EsmeRothArt", "text": "@launchui is siiiiick. That globe graphic though. Making me feel like I'm building websites for a sci-fi movie.", "img": "/images/users/3.jpg", "imgBlur": "/images/users/blur_3.jpg"},
+            {"name": "Darius Flynn", "username": "@flynnn", "text": "Exploring @launchui's sleek UI. It's like a dark mode enthusiast's playground.", "img": "/images/users/4.jpg", "imgBlur": "/images/users/blur_4.jpg"},
+            {"name": "Kai Nakamura", "username": "@KaiNakWaves", "text": "Just made my first website with @launchui. Its flexibility is speaking my language. No drama, just seamless integration.", "img": "/images/users/5.jpg", "imgBlur": "/images/users/blur_5.jpg"}
+        ]
+    },
+    "impression": {
+        "header": "Make the right impression",
+        "text": "Launch UI makes it easy to build an unforgetable website that resonates with professional design-centric audiences.",
+        "cards": [
+            {"label": "Choose your sections", "text": "Choose among 100+ components to build a landing page suited to the needs of your product.", "icon": "/icons/frame.svg", "iconDark": "/icons/dark_frame.svg"},
+            {"label": "Add your content", "text": "Fill the blanks with screenshots, videos, and other content featuring your product.", "icon": "/icons/pen.svg", "iconDark": "/icons/dark_pen.svg"},
+            {"label": "Customize", "text": "Make design yours in no time by changing the variables that control colors, typography, and other styles.", "icon": "/icons/palette.svg", "iconDark": "/icons/dark_palette.svg"}
+        ],
+        "dashboard": "/images/dashboard.png",
+        "dashboardBlur": "/images/dark_dashboard_blur.png",
+        "dashboardDark": "/images/dark_dashboard.png",
+        "dashboardDarkBlur": "/images/dashboard_blur.png"
+    },
+    "subscription": {
+        "header": "Build your dream landing page, today.",
+        "text": "Get lifetime access to all the components. No recurring fees. Just simple, transparent pricing.",
+        "cards": [
+            {"type": "Free", "brief": "For everyone starting out on a website for their big idea", "price": 0, "payment": "free", "link": "/", "button": "Get started for free", "attach": ["9 landing page sections","36 components","5 custom animations"]},
+            {"type": "Pro", "brief": "For early-stage founders, solopreneurs and indie devs", "price": 10, "payment": "one-time payment", "link": "/", "button": "Get all-access", "attach": ["66 landing page sections","126 components","16 illustrations","15 custom animations"]},
+            {"type": "Team", "brief": "For teams and agencies working on cool products together", "price": 15, "payment": "one-time payment", "link": "/", "button": "Get all-acess for your team", "attach": ["All the templates, components and sections available for your entire team"]}
+        ],
+        "taxes": "plus local taxes",
+        "source": "Free and open-source forever"
+
+    },
+    "questionsAndAnswers": {
+        "header": "Questions and Answers",
+        "data": [
+            {
+                "question": "Is Launch UI easy to customise?",
+                "answer": "Yes! Clean code and clear structure make edits quick and simple."
+            },
+            {
+                "question": "Is Launch UI optimized for search engines?",
+                "answer": "Absolutely. Semantic HTML and best SEO practices are built in."
+            },
+            {
+                "question": "How does Launch UI compare to no-code tools?",
+                "answer": "Faster, leaner and gives you full control over every detail."
+            },
+            {
+                "question": "Why not just coding a website yourself?",
+                "answer": "Save hours of setup. Focus on content, not boilerplate."
+            },
+            {
+                "question": "Can I get a refund if I don't like it?",
+                "answer": "Yes. We offer a 7-day no-questions-asked refund policy."
+            },
+            {
+                "question": "What features will be added in the future?",
+                "answer": "More sections, themes, animations, and CMS integrations."
+            }
+        ]
+    },
+    "footer": {
+        "footerNav": [
+            {"name": "Product", "links": [
+                {"linkName": "Changelog", "url": "/"},
+                {"linkName": "Documentation", "url": "/"}
+            ]},
+            {"name": "Company", "links": [
+                {"linkName": "About", "url": "/"},
+                {"linkName": "Careers", "url": "/"},
+                {"linkName": "Blog", "url": "/"}
+            ]},
+            {"name": "Contact", "links": [
+                {"linkName": "Github", "url": "/"},
+                {"linkName": "Discord", "url": "/"},
+                {"linkName": "Twitter", "url": "/"}
+            ]}
+        ],
+        "footerCopyRights": [
+            {"name": "© Launch UI. All rights reserved.", "link": "/"},
+            {"name": "Privacy Policy", "link": ""},
+            {"name": "Terms of service", "link": ""}
+        ]
+    },  
+    "aboveFooter": "Start building"
+}
