@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎴 Launch UI
 
-## Getting Started
+A modern, responsive UI kit for building high-impact landing pages using React and Tailwind CSS.
 
-First, run the development server:
+### 🔗 Live Demo
+[https://launch-ui-showcase.netlify.app](https://launch-ui-showcase.netlify.app)
+
+---
+
+### 🚀 Features
+
+- **🌍 Multi-language support (English / Ukrainian)**
+- **🎨 Color theme customization via Context + LocalStorage**
+- **⚡ Fully responsive layout**
+- **🌗 Dark mode support**
+- **🔍 SEO-friendly structure with semantic HTML**
+- **🌈 Gradient and blur visual effects**
+- **💾 No backend required — static and lightweight**
+
+---
+
+### 🛠 Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **Next.js**
+- **Local JSON files for content and translations**
+
+---
+
+### 📂 Project Structure
+
+```bash
+📂 app
+ └── [locale]  # Page structure
+📂 components  # Reusable UI components
+📂 lib         # Additional scripts
+📂 locales     # Translations (en.json, ua.json)
+📂 public      # Static assets (images, icons)     
+
+```
+
+---
+
+### 🧪 Getting Started
+
+- **1. Clone the repository**
+
+```bash
+git clone https://github.com/whitepink1/launch-ui.git
+cd launch-ui
+```
+
+- **2. Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+- **3. Start the development server**
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 to view the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🌌 Language Switching
 
-## Learn More
+Translations are handled via JSON dictionaries and rendered based on locale (e.g., /en, /ua). Language context is managed via React and stored in LocalStorage.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎨 Language Switching
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Color themes are managed through React Context and CSS variables, allowing dynamic styling throughout the app. Settings persist in LocalStorage for a consistent experience.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📁 Purpose
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was created as part of the personal portfolio of Whitepink — a frontend developer passionate about building clean, responsive, and customizable web interfaces.
+Feel free to explore and get inspired.
+
+---
+
+### 📌 Notes 
+
+- This is a frontend-only project.
+
+- No authentication or backend is implemented.
+
+- Designed for showcasing layout & UI design skills.
+
+- Designed by [Mikołaj Dobrucki](https://www.figma.com/community/file/1420131743903900629)
